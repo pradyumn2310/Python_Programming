@@ -1,0 +1,246 @@
+###this is my python project####
+
+    
+print("Welcome to Intellicrytor")
+name_1=input("Enter your name dear  first user :)")
+name_2=input("Enter your name dear second user :)")
+print("\nChoose user\n1.",name_1,"\n2.",name_2) 
+choice=int(input("Enter your choice:"))
+if(choice==1):
+    print("\nWelcome",name_1,"\n")
+elif(choice==2):
+    print("\nWelcome",name_2,"\n")
+print("\n*****MAIN MENU*****")
+print("1.Enter messsage")
+choice_1=int(input("Enter your choice:"))
+if(choice_1==1):
+    txt=input("Enter your message:")
+    print("\n***MESSAGE MENU***")
+    print("1.Cipher message\n2.Dicipher message")
+    num=int(input("Enter you choice:"))
+    if(num==1):
+        def encypt_func(text, s):  
+            result = ""  
+          
+          
+         
+            for i in range(len(text)):  
+                char = text[i]  
+                 
+          
+                if (char.isupper()):  
+                    result += chr((ord(char) + s - 64) % 26 + 65)  
+                 
+                else:  
+                    result += chr((ord(char) + s - 96) % 26 + 97)  
+            return result  
+        
+        text=txt  
+        s = 4  
+        print("Plain text : " + text)  
+        print("Shift pattern : " + str(s)) 
+        print("Cipher: " + encypt_func(text, s)) 
+print("\nDear user do you wish to Continue?\nType 'Y' for Yes and 'N'for No!")
+xyz=input(" Enter your Decision:")
+if(xyz=='Y'):
+    if(choice==1):
+        print("\nWelcome",name_2,"\n")
+        print("\n***Reciever's Menu***\n1.Ciphered Messsage\n2.Deciphered Message")
+        num=int(input("Enter you choice:"))
+        if(num==1):
+            def encypt_func(text, s):  
+                result = ""  
+              
+              
+              
+                for i in range(len(text)):  
+                    char = text[i]  
+                     
+              
+                    if (char.isupper()):  
+                        result += chr((ord(char) + s - 64) % 26 + 65)  
+                     
+                    else:  
+                        result += chr((ord(char) + s - 96) % 26 + 97)  
+                return result  
+             
+            text=txt  
+            s = 4  
+            print("Plain text : " + text)  
+            print("Shift pattern : " + str(s)) 
+            print("Cipher: " + encypt_func(text, s))
+        elif(num==2):
+            message = txt 
+            LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+
+            for key in range(len(LETTERS)):
+               translated = ''
+               for symbol in message:
+                  if symbol in LETTERS:
+                     num = LETTERS.find(symbol)
+                     num = num - key
+                     if num < 0:
+                        num = num + len(LETTERS)
+                     translated = translated + LETTERS[num]
+                  else:
+                     translated = translated + symbol
+            print('Hacking key #%s: %s' % (key, translated))
+        else:
+            print("Invalid entry!!!")
+    elif(choice==2):
+        print("\nWelcome",name_1,"\n")
+        print("\n***Reciever's Menu***\n1.Ciphered Messsage\n2.Deciphered Message")
+        num=int(input("Enter you choice:"))
+        if(num==1):
+            def encypt_func(text, s):  
+                result = ""  
+              
+              
+              
+                for i in range(len(text)):  
+                    char = text[i]  
+                     
+              
+                    if (char.isupper()):  
+                        result += chr((ord(char) + s - 64) % 26 + 65)  
+                      
+                    else:  
+                        result += chr((ord(char) + s - 96) % 26 + 97)  
+                return result  
+             
+            text=txt  
+            s = 4  
+            print("Plain text : " + text)  
+            print("Shift pattern : " + str(s)) 
+            print("Cipher: " + encypt_func(text, s))
+        elif(num==2):
+            message = txt 
+            LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+
+            for key in range(len(LETTERS)):
+               translated = ''
+               for symbol in message:
+                  if symbol in LETTERS:
+                     num = LETTERS.find(symbol)
+                     num = num - key
+                     if num < 0:
+                        num = num + len(LETTERS)
+                     translated = translated + LETTERS[num]
+                  else:
+                     translated = translated + symbol
+            print('Hacking key #%s: %s' % (key, translated))
+        else:
+            print("Invalid entry!!!")
+elif(xyz=='N'):
+    print(" ")
+else:
+    print("Invalid Entry!!!!")
+if(choice==1):
+    print(name_2,"do you wish to reply?\n If yes Press'C':")
+    chat=input(" ")
+    if(chat=='C'):
+        txt=input("Enter your message:")
+        print("\n***MESSAGE MENU***")
+        print("1.Cipher message\n2.Dicipher message")
+        num=int(input("Enter you choice:"))
+        if(num==1):
+            def encypt_func(text, s):  
+                result = ""  
+              
+              
+             
+                for i in range(len(text)):  
+                    char = text[i]  
+                     
+              
+                    if (char.isupper()):  
+                        result += chr((ord(char) + s - 64) % 26 + 65)  
+                     
+                    else:  
+                        result += chr((ord(char) + s - 96) % 26 + 97)  
+                return result  
+            
+            text=txt  
+            s = 4  
+            print("Plain text : " + text)  
+            print("Shift pattern : " + str(s)) 
+            print("Cipher: " + encypt_func(text, s))
+            print(name_1,"you recieved a reply!")
+            print("1.See reply")
+            r=int(input(" "))
+            if(r==1):
+                message = txt 
+                LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+
+                for key in range(len(LETTERS)):
+                   translated = ''
+                   for symbol in message:
+                      if symbol in LETTERS:
+                         num = LETTERS.find(symbol)
+                         num = num - key
+                         if num < 0:
+                            num = num + len(LETTERS)
+                         translated = translated + LETTERS[num]
+                      else:
+                         translated = translated + symbol
+                print('Hacking key #%s: %s' % (key, translated))
+            else:
+                print("Invalid entry!!!")
+                
+elif(choice==2):
+    print(name_1,"do you wish to reply?\n If yes Press'C':")
+    chat=input(" ")
+    if(chat=='C'):
+        txt=input("Enter your message:")
+        print("\n***MESSAGE MENU***")
+        print("1.Cipher message\n2.Dicipher message")
+        num=int(input("Enter you choice:"))
+        if(num==1):
+            def encypt_func(text, s):  
+                result = ""  
+              
+              
+             
+                for i in range(len(text)):  
+                    char = text[i]  
+                     
+              
+                    if (char.isupper()):  
+                        result += chr((ord(char) + s - 64) % 26 + 65)  
+                     
+                    else:  
+                        result += chr((ord(char) + s - 96) % 26 + 97)  
+                return result  
+            
+            text=txt  
+            s = 4  
+            print("Plain text : " + text)  
+            print("Shift pattern : " + str(s)) 
+            print("Cipher: " + encypt_func(text, s))
+            print(name_2,"you recieved a reply!")
+            print("1.See reply")
+            r=int(input(" "))
+            if(r==1):
+                message = txt 
+                LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+
+                for key in range(len(LETTERS)):
+                   translated = ''
+                   for symbol in message:
+                      if symbol in LETTERS:
+                         num = LETTERS.find(symbol)
+                         num = num - key
+                         if num < 0:
+                            num = num + len(LETTERS)
+                         translated = translated + LETTERS[num]
+                      else:
+                         translated = translated + symbol
+                print('Hacking key #%s: %s' % (key, translated))
+            else:
+                print("Invalid entry!!!")
+        
+print("\nEnd of Intellicryptor!!!!")
+print("\nHave a Great Day Ahead!")
+    
+        
+    
